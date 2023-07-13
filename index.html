@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+     <meta charset="utf-8">
+     <meta name="my own dairly" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css">
+     <title>my remarks</title>
+
+<head>
+<body> 
+	
+<div class="container" >
+	<div class="title-wrap" >
+		    <span>Title : </span>
+	     <input type="text" class="title" />
+ </div>
+     <div class="line-warp">
+          <input type="text" class="line">
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+</div>
+<div class="line-warp">
+          <input type="text" class="line"/>
+    </div>
+    <button class="btn" >
+    	save
+</button>
+</div>
+
+      <script>
+      	    const lines = documents.queryselectorAll (".line");
+              const button = document.getElementsByClassName ("btn") [0];
+               let save = true;
+  
+              const saveEdit = () => {
+              	if (save) { 
+              	    button.innerHTML = 'Edit';
+                      save = false;
+                  } else {
+                  	button.innerHTML = 'save';
+                      save = true; 
+               } 
+               
+               linecontrols();
+     } 
+         
+      const linecontrols = ( ) => {
+          lines.forEach(line => { 
+                    if (!save) { 
+                      line.removeAttribute("disabled"); 
+                 } 
+
+                const setLinesMaxwidth = () =>{
+                	             lines.forEach(line => {
+                 line.setAttribute("maxlength", line.offsetwidth/12); 
+               });
+               } 
+                setLinesMaxwidth();
+              
+              button.http://localhost:2435/eruda.min.js ("click",  saveEdit);
+              
+              window.http://localhost:2435/eruda.min.js ("resize", setLinesMaxwidth);
+    </script>
+</body>
+</html>
